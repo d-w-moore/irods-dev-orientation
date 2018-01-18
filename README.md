@@ -26,9 +26,27 @@ Now you've got Ubuntu, let's install the PostgreSQL database
 Once you've booted back up again after install , you can install some packages  that will be necessary 
 for the compiling and running of the iRODS server.
 
-First, the database.
+First, the general setup by way of installing some necessary support:
+```
+sudo apt-get update
+  * [...] some amount of verbiage spewed here while Ubuntu finds any necessary updates [...] *
+sudo apt-get -y install git g++ make python-dev help2man unixodbc libfuse-dev libcurl4-gnutls-dev libbz2-dev zlib1g-dev libpam0g-dev libssl-dev libxml2-dev libkrb5-dev unixodbc-dev libjson-perl python-psutil python-jsonschema super python-exif odbc-postgresql
+```
+
+Second, the database setup. (To be able to run iRODS, let alone build in your edits!)
 
 Issue the commands:
 ```
 sudo apt-get install -y postgresql
+```
+And before we forget to do it (the ICAT database and an admin user 'irods' are required to run or build iRODS):
+Assume the role of the postgres user :
+```
+sudo su - postgres
+```
+and while you're there, invoke ```psql``` and do these SQL commands:
+```CREATE DATABASE "ICAT";
+CREATE USER irods WITH PASSWORD 'testpassword';
+GRANT ALL PRIVILEGES ON DATABASE "ICAT" to irods;
+\q
 ```
