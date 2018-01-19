@@ -47,7 +47,8 @@ Now become the postgres user :
 sudo su - postgres
 ```
 and while you're there, invoke ```psql``` and do these SQL commands:
-```CREATE DATABASE "ICAT";
+```
+CREATE DATABASE "ICAT";
 CREATE USER irods WITH PASSWORD 'testpassword';
 GRANT ALL PRIVILEGES ON DATABASE "ICAT" to irods;
 \q
