@@ -57,6 +57,5 @@ With that we're ready now to install the binary packages that will get the iRODS
 
 * fetch the public key for the repository
     - ```KEY=$(wget -qO - https://packages.irods.org/irods-signing-key.asc)```  
-    - ```sudo apt-key add - <<<"$KEY"```
 * add the repository so subsequent `apt` commands will see it
-    
+    - ```sudo apt-key add - <<<"$KEY"```
