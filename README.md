@@ -40,8 +40,9 @@ Issue the commands:
 ```
 sudo apt-get install -y postgresql
 ```
-And before we forget to do it (the ICAT database and an admin user 'irods' are required to run or build iRODS):
-Assume the role of the postgres user :
+And before we forget to do it (the ICAT database and an admin role (user, if you like) 'irods' are required to run or build iRODS):
+
+Now become the postgres user :
 ```
 sudo su - postgres
 ```
@@ -51,6 +52,10 @@ CREATE USER irods WITH PASSWORD 'testpassword';
 GRANT ALL PRIVILEGES ON DATABASE "ICAT" to irods;
 \q
 ```
-With that we're  ready now to install the binary packages that will get the iRODS server going:
-    * get the repository name: 
-        - `XY`
+With that we're ready now to install the binary packages that will get the iRODS server going:
+
+* fetch the public key for the repository
+    - ```KEY=$(wget -qO - https://packages.irods.org/irods-signing-key.asc)```  
+    - ```sudo apt-key add - <<<"$KEY"```
+* add the repository so subsequent `apt` commands will see it
+    
