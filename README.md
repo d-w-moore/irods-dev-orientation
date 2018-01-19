@@ -53,6 +53,7 @@ CREATE USER irods WITH PASSWORD 'testpassword';
 GRANT ALL PRIVILEGES ON DATABASE "ICAT" to irods;
 \q
 ```
+Now, *_exit the bash shell of the postgres user_*  (using `exit` or by  issuing  **Control-D**)
 With that we're ready now to install the binary packages that will get the iRODS server going:
 
 * fetch the public key for the repository
