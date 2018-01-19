@@ -26,11 +26,12 @@ Now you've got Ubuntu, let's install the PostgreSQL database
 Once you've booted back up again after install , you can install some packages  that will be necessary 
 for the compiling and running of the iRODS server.
 
-First, the general setup by way of installing some necessary support:
+First, the general setup by way of installing some necessary prerequisite machinations including the installing of support packages for the building of iRODS code later on...
+First, a `sudo apt-get update` will spill a lot of  verbiage but essentially make sure Ubuntu is updated on package lists and dependencies. Then follow this up with the necessary package installs:
 ```
-sudo apt-get update
-  * [...] some amount of verbiage spewed here while Ubuntu finds any necessary updates [...] *
-sudo apt-get -y install git g++ make python-dev help2man unixodbc libfuse-dev libcurl4-gnutls-dev libbz2-dev zlib1g-dev libpam0g-dev libssl-dev libxml2-dev libkrb5-dev unixodbc-dev libjson-perl python-psutil python-jsonschema super python-exif odbc-postgresql
+sudo apt-get -y install git g++ make python-dev help2man unixodbc libfuse-dev libcurl4-gnutls-dev \
+libbz2-dev zlib1g-dev libpam0g-dev libssl-dev libxml2-dev libkrb5-dev unixodbc-dev libjson-perl \
+python-psutil python-jsonschema super python-exif odbc-postgresql
 ```
 
 Second, the database setup. (To be able to run iRODS, let alone build in your edits!)
@@ -50,3 +51,6 @@ CREATE USER irods WITH PASSWORD 'testpassword';
 GRANT ALL PRIVILEGES ON DATABASE "ICAT" to irods;
 \q
 ```
+With that we're  ready now to install the binary packages that will get the iRODS server going:
+    * get the repository name: 
+        - `XY`
