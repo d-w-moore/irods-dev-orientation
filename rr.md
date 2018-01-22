@@ -19,7 +19,9 @@ sudo apt-get install ccache cmake make g++-multilib gdb \
   ```
   
 Also included on the wiki page  is a pointer to how to build capnproto from scratch, 
-necessary if using earlier than Ubuntu 16, on this web page:
+necessary if using earlier than Ubuntu 16 . Follow the excerpt below, or get fuller 
+instructions from the included link:
+
 ```https://capnproto.org/install.html#installation-unix```
 
 So stop right here and use these commands to build `capnproto` if you're using Ubuntu 14 :
