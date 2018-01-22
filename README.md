@@ -1,6 +1,7 @@
 # irods-dev-beginner
-A guide for beginners who want to develop on iRODS
-==================================================
+
+Chapter 0. A guide for developers who want to work with/on iRODS source
+=======================================================================
 
 Requirements
 ------------
