@@ -41,7 +41,7 @@ installed under `/usr/local/` per the default.
 
 Then:
 
-` cd ../build_rr ; cmake -Ddisable32bit=ON  ../rr `
+` cd ../build_rr ; cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local -Ddisable32bit=ON  ../rr `
 
 After this, you should be able to build with `make` (insert your `-j #procs` if desired) , then:
 
