@@ -1,4 +1,4 @@
-# irods-dev-beginner
+# irods-dev-begindoc
 
 Chapter 0. A guide for developers who want to work with/on iRODS source
 =======================================================================
