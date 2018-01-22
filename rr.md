@@ -50,9 +50,10 @@ After this, you should be able to build with `make` (insert your `-j #procs` if 
 
 The tests may fail on `vsyscall_reverse_next` due to a regex-fail in the test, but this is ok.
 
-Sample use is
+Sample use is (under bash, putting first line of below into your `~/.bashrc` so you don't have to type it every time:
 
 ```
+export PATH=$HOME/local/bin:$PATH #non-root install only
 rr record -w  <cmd args...>
 rr ps
 rr replay -f <pid>
