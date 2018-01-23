@@ -34,11 +34,11 @@ make -j6 check
 sudo make install 
 ```
 
-Now, make a parallel build directory : `mkdir build_rr`  
+Now, `cd ..` to escape the `capnproto...` directory (if you performed that step) and  make a  build directory parallel to the `rr` directory: `mkdir build_rr`  
 
 And:
 
-` cd ../build_rr ; cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local -Ddisable32bit=ON  ../rr `
+` cd build_rr  &&  cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local -Ddisable32bit=ON  ../rr `
 
 Again we're assuming an *amd64-compatible* build, *non-root* install. You can omit the '-DCMAKE_INSTALL_PREFIX...' part and the rr binary will be
 installed under `/usr/local/` per the default.
