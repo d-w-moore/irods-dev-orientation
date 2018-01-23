@@ -1,4 +1,4 @@
-# irods-dev-begindoc
+# irods-dev-orientation
 
 A guide for developers who want to work with/on iRODS source
 =======================================================================
