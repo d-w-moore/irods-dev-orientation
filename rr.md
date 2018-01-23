@@ -35,15 +35,13 @@ sudo make install
 ```
 
 Now, make a parallel build directory : `mkdir build_rr`  
-```
-cd  rr ; ./configure --prefix=$HOME/local
-```
-Again we're assuming an *amd64-compatible* build, *non-root* install. You can omit the --prefix option  and the rr binary will be
-installed under `/usr/local/` per the default.
 
-Then:
+And:
 
 ` cd ../build_rr ; cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local -Ddisable32bit=ON  ../rr `
+
+Again we're assuming an *amd64-compatible* build, *non-root* install. You can omit the '-DCMAKE_INSTALL_PREFIX...' part and the rr binary will be
+installed under `/usr/local/` per the default.
 
 After this, you should be able to build with `make` (insert your `-j #procs` if desired) , then:
 
