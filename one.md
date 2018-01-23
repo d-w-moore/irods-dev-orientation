@@ -1,7 +1,7 @@
 # Chapter 1., In which we install iRODS binaries and interact with a living, breathing server
 
  **NOTE** insert instruction here maybe something like  :   
-     ```sudo su - psql -c "dropdb ICAT 2>/dev/null ; createdb ICAT " ```
+     ```sudo su - postgres -c "dropdb ICAT 2>/dev/null ; createdb ICAT " ```
  to get database in known state.
  
 You can now install the server and database plug-ins straight from the repository:  
