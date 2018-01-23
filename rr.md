@@ -34,7 +34,7 @@ make -j6 check
 sudo make install 
 ```
 
-Now, `cd ..` to escape the `capnproto...` directory (if you performed that step) and  make a  build directory parallel to the `rr` directory: `mkdir build_rr`  
+Now, `cd ..` to escape the **capnproto** build directory (if you performed that step) and  make a  build directory parallel to the `rr` directory: `mkdir build_rr`  
 
 And:
 
@@ -50,7 +50,7 @@ After this, you should be able to build with `make` (insert your `-j <#cpusToUse
 
 The tests may fail on `vsyscall_reverse_next` due to a regex-fail in the test, but this is ok.
 
-Sample use is (under bash, putting first line of below into your `~/.bashrc` so you don't have to type it every time:
+Sample use is (under bash, and optionally putting first line of below into your `~/.bashrc` so you don't have to type it every time):
 
 ```
 export PATH=$HOME/local/bin:$PATH #non-root install only
