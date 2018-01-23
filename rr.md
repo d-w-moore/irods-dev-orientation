@@ -43,7 +43,7 @@ And:
 Again we're assuming an *amd64-compatible* build, *non-root* install. You can omit the '-DCMAKE_INSTALL_PREFIX...' part and the rr binary will be
 installed under `/usr/local/` per the default.
 
-After this, you should be able to build with `make` (insert your `-j #procs` if desired) , then:
+After this, you should be able to build with `make` (insert your `-j <#cpusToUse>` if desired) , then:
 
 `make test` and (with `sudo` unless doing non-root install):
 `make install`
