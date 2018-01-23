@@ -5,3 +5,8 @@ You can now install the server and database plug-ins straight from the repositor
 
 At this point, also configure the server and set it in motion:  
 `sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/localhost_setup_postgres.input`
+
+< FILL   
+   IN  
+       MORE   
+            HERE >
