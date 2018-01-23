@@ -2,7 +2,7 @@
 
  **NOTE** insert instruction here maybe something like  :   
      ```sudo su - psql -c "dropdb ICAT 2>/dev/null ; createdb ICAT " ```
- 
+ to get database in known state.
  
 You can now install the server and database plug-ins straight from the repository:  
 `sudo apt-get -y install irods-server irods-database-plugin-postgres`
