@@ -2,8 +2,8 @@
 
 Development set-up
 
-Requirements
-------------
+Prerequisites
+-------------
 
 We need only :
 
