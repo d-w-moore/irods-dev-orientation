@@ -29,7 +29,7 @@ In the case of etcher, that good person who's undertaken to help in getting your
 
 The flash drive can then be used to install Ubuntu Linux on your workstation. Select mostly defaults when the install program asks, except as your common sense might urge you to stray. For example, large `/var` partitions may be needed, if they're made separate from `/`, particularly if you later want to create virtual machines KVM-QEMU and virt-manager. Also:  select updates to be downloaded during the install.  Ubuntu 14 has been around a few years.
 
-When you're done with the install and log in as your new user, you'll have sudo access, so begin by installing some general prerequisites for work in the iRODS development environment:
+When you're done with the install and log in as your new user, you'll have `sudo` (administrative) access on your machine, so begin by installing some general prerequisites for work in the iRODS development environment:
 ```
  sudo apt-get update
  sudo apt-get install -y git make ninja-build python-pip libssl-dev zlib1g-dev apt-transport-https
