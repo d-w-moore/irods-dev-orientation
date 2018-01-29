@@ -10,7 +10,7 @@ We need only :
 * a familiarity with basic Linux commands and the ability to launch a terminal window. (Ok, we'd like you to be able to install Ubuntu Linux as well)
 * an open (aka open-source-friendly) and all-absorbing mind. 
 * some solid programming experience in C++  and/or Python
-* an Intel-based machine constructed in this 21st century 
+* an Intel-based machine constructed in the 21st century 
 * an internet connection
  
 Contents and Purpose of This Documentation
@@ -21,10 +21,18 @@ Even if you're not working directly on the iRODS core team, you might still find
 
 Quick Start Guide
 -----------------
-Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will be using either "Rufus" ( a windows tool ) or "etcher-electron" (which works on any Linux platform ) to give you the boot image.
+Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will be using either "Rufus" (an MS Windows tool) or "etcher-electron" - which should work on any Linux platform - to give you the boot image on a USB-insertable flash drive.
 
 In the case of etcher, that good person who's undertaken to help in getting your workstation set up can do the following:
 * make sure an .ISO image of **Ubuntu14.04.5 LTS** (from `ubuntu.com` )is on the machine doing the 'burning'
     - `wget  http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-amd64.iso `
 * navigate in a browser to `https://github.com/resin-io/etcher`
-* click on the `README.md` and follow the instructions
+* click on the `README.md` and follow the instructions there, to burn the Ubuntu 14 image to the flash drive
+
+The flash drive can then be used to install Ubuntu Linux on your workstation. Select mostly defaults when the install program asks, except as your common sense might urge you to stray. For example, large `/var` partitions may be needed, if they're made separate from `/`, particularly if you later want to create virtual machines KVM-QEMU and virt-manager. Also:  select updates to be downloaded during the install.  Ubuntu 14 has been around a few years.
+
+When you're done with the install and log in as your new user, you'll have sudo access, so begin by installing some general prerequisites for work in the iRODS development environment:
+```
+ sudo apt-get update
+ sudo apt-get install -y git make ninja-build python-pip libssl-dev zlib1g-dev python{,3}-dev 
+```
