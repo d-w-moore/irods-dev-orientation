@@ -32,5 +32,9 @@ The flash drive can then be used to install Ubuntu Linux on your workstation. Se
 When you're done with the install and log in as your new user, you'll have sudo access, so begin by installing some general prerequisites for work in the iRODS development environment:
 ```
  sudo apt-get update
- sudo apt-get install -y git make ninja-build python-pip libssl-dev zlib1g-dev python{,3}-dev 
+ sudo apt-get install -y git make ninja-build python-pip libssl-dev zlib1g-dev apt-transport-https
 ```
+
+At the time of iRODS release **4.2.2** , these are the most commonly used packages to facilitate our software work and in open-source methodologies in general. Later we'll install more packages as necessary.
+
+As an exercise, go ahead and navigate in your browser to `http://slides.com/irods` and find the *UGM 2017 - Getting Started* slides from June of 2017. Follow the directions there in the first few pages, to install the PostgreSQL iRODS server. We'll pick up there in the next chapter.
