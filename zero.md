@@ -27,7 +27,7 @@ In the case of etcher, that good person who's undertaken to help in getting your
 * navigate in a browser to `https://github.com/resin-io/etcher`
 * click on the `README.md` and follow the instructions there, to burn the Ubuntu 14 image to the flash drive
 
-The flash drive can then be used to install Ubuntu Linux on your workstation. Select mostly defaults when the install program asks, except as your common sense might urge you to stray. For example, large `/var` partitions may be needed, if they're made separate from `/`, particularly if you later want to create virtual machines KVM-QEMU and virt-manager. Also:  select updates to be downloaded during the install.  Ubuntu 14 has been around a few years.
+The flash drive can then be used to install Ubuntu Linux on your workstation. Select mostly defaults when the install program asks, except as your common sense might urge you to stray. For example, large `/var` partitions may be needed, if they're made separate from `/`, particularly if you later want to create virtual machines via KVM, QEMU and **virt-manager**. Also:  select updates to be downloaded during the install.  Ubuntu 14 has been around a few years.
 
 When you're done with the install and log in as your new user, you'll have `sudo` (administrative) access on your machine, so begin by installing some general prerequisites for work in the iRODS development environment:
 ```
