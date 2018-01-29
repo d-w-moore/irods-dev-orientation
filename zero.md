@@ -23,7 +23,7 @@ Quick Start Guide
 -----------------
 Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will be using either "Rufus" ( a windows tool ) or "etcher-electron" (which works on any Linux platform ) to give you the boot image.
 
-In the case of etcher, that good person who's undertaken the task of getting you started can do the following:
+In the case of etcher, that good person who's undertaken to help in getting your workstation set up can do the following:
 * make sure an .ISO image of **Ubuntu14.04.5 LTS** (from `ubuntu.com` )is on the machine doing the 'burning'
     - `wget  http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-amd64.iso `
 * navigate in a browser to `https://github.com/resin-io/etcher`
