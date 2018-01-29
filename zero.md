@@ -1,6 +1,4 @@
-# Chapter 0
-
-iRODS Development set-up
+# Chapter 0 - Set-up for iRODS Development Environment 
 
 Prerequisites
 -------------
