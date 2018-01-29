@@ -3,7 +3,7 @@ These commands set up some prerequisites for working under the Python language w
 
 ```
 sudo apt-get upgrade
-sudo apt-get install python-dev python3-dev make git apt-transport-https
+sudo apt-get install python-dev python3-dev python-pip 
 sudo -H apt-get install python-pip
 sudo -H pip install --upgrade pip ; hash -r
 ```
