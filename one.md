@@ -1,16 +1,5 @@
-# Chapter 1., In which we install iRODS binaries and interact with a living, breathing server
+# Chapter 1., In which we test and interact with a living, breathing iRODS Server
 
- **NOTE** insert instruction here maybe something like  :   
-     ```sudo su - postgres -c "dropdb ICAT 2>/dev/null ; createdb ICAT " ```
- to get database in known state.
- 
-You can now install the server and database plug-ins straight from the repository:  
-`sudo apt-get -y install irods-server irods-database-plugin-postgres`
-
-At this point, also configure the server and set it in motion:  
-`sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/localhost_setup_postgres.input`
-
-**FILL   
-   IN  
-       MORE   
-            HERE **
+**ADD  
+     CONTENT  
+        HERE** **!!!**  
