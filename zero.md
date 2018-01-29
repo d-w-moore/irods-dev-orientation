@@ -13,11 +13,11 @@ We need only :
 * an Intel-based machine constructed in this 21st century 
 * an internet connection
  
-Contents and Purpose of This Document
+Contents and Purpose of This Documentation
 ----------
-This is all from the standpoing of a new employee at Renci (Renaissance Computing Institute)'s iRODS Consortium development team.  Yours truly, that same employee and the author of this guide, is still getting up to speed at the time of this writing , a month into the orientation process. The open source way of doing development will be new to many developers, even some who've been working in the software industry for years. Fortunately, a lot of the aka "climbing the learning curve" has been documented for your benefit!
+The aim and narrative of this guide are from the standpoint of a new software support/development professional on Renci's (Renaissance Computing Institute's) iRODS Consortium development team.  Yours truly, that same employee and the author of this guide, is still getting up to speed at the time of this writing , a month into the orientation process, and would like to be a help to others finding themselves in the same lucky position. Of course, the open-source way of doing things will be new to many developers, even some who've been working in the software industry for years.
 
-Even if you're not working here at Renci, these may still be valuable instructions if you're looking to develop on / improve / play with / "bang on" some iRODS .... good luck!
+Even if you're not working directly on the iRODS core team, you might still find these to be valuable instructions if you're looking to develop on / improve / play with / "bang on" some iRODS .... good luck!
 
 Quick Start Guide
 -----------------
