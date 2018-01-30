@@ -37,4 +37,4 @@ When you're done with the install and log in as your new user, you'll have `sudo
 
 At the time of iRODS release **4.2.2** , these are the most commonly used packages to facilitate our software work and in open-source methodologies in general. Later we'll install more packages as necessary.
 
-As an exercise, go ahead and navigate in your browser to `http://slides.com/irods` and find the *UGM 2017 - Getting Started* slides from June of 2017. Follow the directions there in the first few pages, to install the PostgreSQL database and the iRODS server. We'll pick up from there in the next chapter.
+For the steps essential to setting up the iRODS server and icommands packages, go to the  [*UGM 2017 - Getting Started*](http://slides.com/irods/ugm2017-getting-started) and follow the instructions in the first few pages, to install prerequisites as well as iRODS and the PostgreSQL enabled ICAT database. We'll pick up from there in the next chapter.
