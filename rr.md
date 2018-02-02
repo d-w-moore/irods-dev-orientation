@@ -9,20 +9,21 @@ git clone http://github.com/mozilla/rr.git
 Optionally do : `mkdir ~/local` if you want a non-root install.
 
 Note the wiki on GitHub has expansive instructions on building the rr binaries:  
-```https://github.com/mozilla/rr/wiki/Building-And-Installing#hardwaresoftware-requirements```
+
+  https://github.com/mozilla/rr/wiki/Building-And-Installing#hardwaresoftware-requirements
 
 Do this to install prerequisites for building `rr`:
 ```
 sudo apt-get install ccache cmake make g++-multilib gdb \
   pkg-config realpath python-pexpect manpages-dev git \
   ninja-build capnproto libcapnp-dev
-  ```
+```
   
 Also included on the wiki page  is a pointer to how to build capnproto from scratch, 
 necessary if using earlier than Ubuntu 16 . Follow the excerpt below, or get fuller 
 instructions from the included link:
 
-```https://capnproto.org/install.html#installation-unix```
+  https://capnproto.org/install.html#installation-unix
 
 So stop right here and use these commands to build `capnproto` if you're using Ubuntu 14 :
 ```
