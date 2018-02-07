@@ -1,4 +1,4 @@
-# Setting up to install the iRODS Development Environment 
+# Setting up to install an iRODS Development Environment 
 
 Prerequisites
 -------------
