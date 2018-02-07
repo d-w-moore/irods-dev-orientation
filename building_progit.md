@@ -27,14 +27,29 @@ mkdir -p ~/github ; cd ~/github
 
 
 - Import the bundler software into the local Ruby installation:
-` gem install bundler`  
+` gem install bundler`   
 ` hash -r`  
 *Note the last command assumes bash; for **csh** dialects use 'rehash' to force your shell to find the 'bundle' binary*
-## Now, download the repository for "Pro Git 2" from GitHub:  
+
+- `cd ..` to exit the `ruby` build directory
+---
+
+## Now we are equipped to compile all format of the the book from  the repository:  
+- First, locally clone the repo:
 ```
 git clone http://github.com/progit/progit2
 ```
 
-Descend into the local repo and check out the `master` branch:  
+- Then descend into the local repo and check out the `master` branch:  
 `cd progit2`  
-`git checkout`  
+`git checkout` 
+
+- Issue these commands to build.  PDF should be among the formats built
+`bundle install`  
+`bundle exec rake book:build`  
+
+- To view the book in PDF, use the `evince` binary under {14,16} flavors of Ubuntu:  
+`evince ./progit.pdf`
+
+
+
