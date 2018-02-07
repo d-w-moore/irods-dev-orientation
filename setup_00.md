@@ -17,7 +17,7 @@ The aim and narrative of this guide are from the standpoint of a new software su
 
 Even if you're not working directly on the iRODS core team, you might still find these to be valuable instructions if you're looking to develop on / improve / play with / "bang on" some iRODS .... good luck!
 
-Quick Start Guide
+Quick Start Guide : Installing Ubuntu
 -----------------
 Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will be using either "Rufus" (an MS Windows tool) or "etcher-electron" - which should work on any Linux platform - to give you the boot image on a USB-insertable flash drive.
 
@@ -35,6 +35,6 @@ When you're done with the install and log in as your new user, you'll have `sudo
  sudo apt-get install -y git make ninja-build python-pip libssl-dev zlib1g-dev apt-transport-https
 ```
 
-At the time of iRODS release **4.2.2** , these are the most commonly used packages to facilitate our software work and in open-source methodologies in general. Later we'll install more packages as necessary.
+At the time of iRODS **4.2.X** releases  , these are the most commonly used packages to facilitate our software work and in open-source methodologies in general. Later we'll install more packages as necessary.
 
 For the steps essential to setting up the iRODS server and icommands packages, go to the  [*UGM 2017 - Getting Started*](http://slides.com/irods/ugm2017-getting-started) and follow the instructions in the first few pages, to install prerequisites as well as iRODS and the PostgreSQL enabled ICAT database. We'll pick up from there in the next chapter.
