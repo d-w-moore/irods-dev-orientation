@@ -1,5 +1,6 @@
 # Building the 'git' online book
 
+## *('Pro Git 2' by Scott Chacon and Ben Straub)*
 
 First make sure you have installed `git` itself:  
 ```
@@ -34,8 +35,8 @@ mkdir -p ~/github ; cd ~/github
 - `cd ..` to exit the `ruby` build directory
 ---
 
-## Now we are equipped to compile all format of the the book from  the repository:  
-- First, locally clone the repo:
+## Now we are equipped to compile all formats of the book from  the repository:  
+- First, locally clone the repository (aka 'repo'):
 ```
 git clone http://github.com/progit/progit2
 ```
