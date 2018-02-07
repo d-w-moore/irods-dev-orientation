@@ -3,7 +3,7 @@
 A guide for developers who want to work with/on iRODS source
 =======================================================================
 - [Chapter 1 - iRODS fundamentals]
-    * [Installing the iRODS binaries](./setup_00.md)
+    * [Setting up your machine and installing the iRODS binaries](./setup_00.md)
     * [Testing the running server](./one.md)
 
 ...  
