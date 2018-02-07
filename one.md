@@ -1,4 +1,4 @@
-Testing out the newly installed iRODS Server
+## Testing out the newly installed iRODS Server
 
 As a side effect of installing the iRODS server binaries, and running the setup script as directed by the web links mentioned at the end of last section, we now have a running server and we can interact with it using "icommands". In this section, we'll demonstrate the function of 4 of them:`iput`,`ipwd`, `ils`, and `irm`. The first one is used to "put" a local file into iRODS as a data object; the other three commands are iRODS' functional equivalents of the Un\*x commands which they closely resemble.
 
