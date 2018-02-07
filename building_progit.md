@@ -8,7 +8,7 @@ sudo apt-get install git
 For the following work, you may be `cd`'d anywhere you like; a good choice might be a subdirectory of your `$HOME` folder called `github`.  
 
 ```
-mkdir ~/github ; cd ~/github
+mkdir -p ~/github ; cd ~/github
 ```
 
 ## Before doing the work of downloading and "building" the e-book in its various formats (PDF, HTML, asc, etc.), we need to:
@@ -22,7 +22,11 @@ mkdir ~/github ; cd ~/github
 ` ./configure --prefix="$INSTALLDIR"`  
 ` make`  
 ` make install`  
+` export PATH="$INSTALLDIR/bin:$PATH"`  
+` gem install bundler`  
+` hash -r`
 
+*Note the last command assumes bash; for **csh** dialects use 'rehash' to force your shell to find the 'bundle' binary*
 - Import the bundler software into the local Ruby installation:
 
 ## Now, download the repository for "Pro Git 2" from GitHub:  
