@@ -26,7 +26,7 @@ mkdir -p ~/github ; cd ~/github
 
 
 
-- Import the bundler software into the local Ruby installation:
+- Import the bundler software into the local Ruby installation:  
 ` gem install bundler`   
 ` hash -r`  
 *Note the last command assumes bash; for **csh** dialects use 'rehash' to force your shell to find the 'bundle' binary*
