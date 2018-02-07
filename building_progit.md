@@ -22,20 +22,18 @@ mkdir -p ~/github ; cd ~/github
 ` ./configure --prefix="$INSTALLDIR"`  
 ` make`  
 ` make install`  
-` export PATH="$INSTALLDIR/bin:$PATH"`  
-` gem install bundler`  
-` hash -r`
+` export PATH="$INSTALLDIR/bin:$PATH"`
 
-*Note the last command assumes bash; for **csh** dialects use 'rehash' to force your shell to find the 'bundle' binary*
+
+
 - Import the bundler software into the local Ruby installation:
-
+` gem install bundler`  
+` hash -r`  
+*Note the last command assumes bash; for **csh** dialects use 'rehash' to force your shell to find the 'bundle' binary*
 ## Now, download the repository for "Pro Git 2" from GitHub:  
 ```
 git clone http://github.com/progit/progit2
 ```
-
-
-We'll also need
 
 Descend into the local repo and check out the `master` branch:  
 `cd progit2`  
