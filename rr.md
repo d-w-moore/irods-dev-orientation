@@ -25,7 +25,7 @@ instructions from the included link:
 
   https://capnproto.org/install.html#installation-unix
 
-So stop right here and use these commands to build `capnproto` if you're using Ubuntu 14 :
+So pause right here to build `capnproto` if you're using Ubuntu 14 (or less recent) :
 ```
 curl -O https://capnproto.org/capnproto-c++-0.6.1.tar.gz
 tar zxf capnproto-c++-0.6.1.tar.gz
