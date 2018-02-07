@@ -44,7 +44,7 @@ git clone http://github.com/progit/progit2
 `cd progit2`  
 `git checkout` 
 
-- Issue these commands to build.  PDF should be among the formats built
+- Issue these commands to build.  PDF should be among the formats built  
 `bundle install`  
 `bundle exec rake book:build`  
 
