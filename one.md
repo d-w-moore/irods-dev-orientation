@@ -1,6 +1,6 @@
 ## Testing out the newly installed iRODS Server
 
-If you've installed the iRODS server binary and its associated support packages and run the setup script, as directed in the last section, you should now have a functioning, local instance of an iRODS server. The server is the interface and mediator between any client (local or remote) and the ICAT database that tracks all data objects iRODS knows about.
+If you've installed the iRODS server binary and its associated support packages and run the setup script, as directed in the last section, you should now have a functioning instance of an iRODS server running locally on your computer. The server is the interface and mediator between any client (local or remote) and the ICAT database that tracks all data objects iRODS knows about.
 
 You can now begin interacting with the server using the iRODS client "icommands".  Of these just a couple of examples will be given here, after which it will behoove any beginner to step through the beginner training ([link](#endsection) at the end of this section) in which the environment and some basic use cases are explored, and some aspects of the iRODS infrastructure are explained -- object metadata and its manipulation being an important very part of the latter.
 
