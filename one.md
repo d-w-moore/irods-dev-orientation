@@ -14,7 +14,7 @@ To verify there is a running iRODS server on your machine, you can first open a 
 
 * As `irods`, you should be able to see the current position in the iRODS hierarchy (tracked by your current session as the admin user, logged into the ICAT-enabled server) by typing the following command : `ipwd`
 
-* Use the command line `touch sample.txt` to make sure a file by that name exists in your current directory.  Then type `iput sample.txt` This should insert the file you just created -- but as a new data object -- into iRODS' "ICAT" catalog of objects. Issuing an `ils` command should verify that it is there, in the `/tempZone/home/irods` directory where you sit by default when first logging in as this iRODS user.
+* Use the command line `touch sample.txt` to make sure a file by that name exists in your current directory.  Then type `iput sample.txt` This should insert the file you just created -- but as a new data object -- into the iRODS catalog. Issuing an `ils` command should verify that it is there, in the `/tempZone/home/irods` directory where you sit by default when first logging in as this iRODS user.
 
 ---
 <A name="endsection"></A>
