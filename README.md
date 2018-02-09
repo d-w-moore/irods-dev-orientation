@@ -15,7 +15,7 @@ A guide for developers who want to work with/on iRODS source
 ...  
 
 - **B** git and GitHub
-    * [Downloading and Building the "Pro Git 2" e-book]{./building_progit.md)
+    * [Downloading and Building the "Pro Git 2" e-book](./building_progit.md)
 
 ...
 
