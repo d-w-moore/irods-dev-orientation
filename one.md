@@ -1,18 +1,13 @@
 ## Testing out the newly installed iRODS Server
 
-As a side effect of installing the iRODS server binaries, and running the setup script as directed by the web links mentioned at the end of last section, we now have a running server and we can interact with it using "icommands". In this section, we'll demonstrate the function of 4 of them:`iput`,`ipwd`, `ils`, and `irm`. The first one is used to "put" a local file into iRODS as a data object; the other three commands are iRODS' functional equivalents of the Un\*x commands which they closely resemble.
+Having installing the iRODS server binaries, and then running the setup script as directed, we now have a running server; we can  verify this by interacting with it via the iRODS client "icommands".  In many cases similar their un\*x-like cousins (except for a prepended 'i' in the name), they're also analagous in function to those same counterparts : `icd`, `ipwd`, `ils`, and `irm` do pretty much what you'd think -- the difference being that they navigate, orient, and inform you  in terms of your current position within the hierarchy of iRODS collections (rather like directories) and data objects (similar to unix files), instead of within a Linux or Unix filesystem . `iput` is another important one which can take a file from your current Unix directory and place it into iRODS as a data object.
 
-To verify we have a properly running iRODS server, first open a terminal window and issue the command: 
+Now, to verify there is a functional, local iRODS server instance, you can first open a terminal window and take the following steps:
 
-`sudo su - irods`
+* This command should allow you to become `irods` "service account" (ie. admin) user:  `sudo su - irods`
 
-If successful, this will switch you over to the iRODS service account user, `irods`. (If not successful, you need your administrator to grant you `sudo` access).  
+* As `irods`, you should be able to see the current working directory of that user's current session (ie. persistent connection to the running server) by typing : `ipwd`
 
-From this shell prompt you should be able to see the current working directory of the `irods` user's current session (ie. persistent connection to the running server) by typing :
-`ipwd`
-
-Now, use the command line `touch sample.txt` to make sure a file by that name exists in your current directory.  
-Then type `iput sample.txt`
-What this has done is to insert the file you just created, as a new data object (equivalent to a data file in iRODS) into iRODS' local catalog of objects. `ils` should verify that it is there, in the `/tempZone/home/irods` directory where you sit by default when logging in to any new iRODS session as user `irods`.
+* Use the command line `touch sample.txt` to make sure a file by that name exists in your current directory.  Then type `iput sample.txt` This should insert the file you just created -- but as a new data object -- into iRODS' "ICAT" catalog of objects. Issuing an `ils` command should verify that it is there, in the `/tempZone/home/irods` directory where you sit by default when first logging in as this iRODS user.
 
 Assuming you [cloned](http://slides.com/irods/ugm2017-getting-started#/2) the [irods_training](https://github.com/irods/irods_training) repository while working through the last section, your next step should be  read and work throught the examples presented there.
