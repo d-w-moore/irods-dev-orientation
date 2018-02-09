@@ -1,8 +1,10 @@
 ## Testing out the newly installed iRODS Server
 
-Having installing the iRODS server binaries, and then running the setup script as directed, we now have a running server; we can  verify this by interacting with it via the iRODS client "icommands".  In many cases similar their un\*x-like cousins (except for a prepended 'i' in the name), they're also analagous in function to those same counterparts : `icd`, `ipwd`, `ils`, and `irm` do pretty much what you'd think -- the difference being that they navigate, orient, and inform you  in terms of your current position within the hierarchy of iRODS collections (rather like directories) and data objects (similar to unix files), instead of within a Linux or Unix filesystem . `iput` is another important one which can take a file from your current Unix directory and place it into iRODS as a data object.
+If you've installed the iRODS server binary and its associated support packages and run the setup script, as directed in the last section, you should now have a functioning, local instance of an iRODS server. You can test this fact by interacting with it via the iRODS client "icommands".  
 
-Now, to verify there is a functional, local iRODS server instance, you can first open a terminal window and take the following steps:
+In many cases similar their un\*x-like cousins (except for a prepended 'i' in the name), the icommands are also analogous in function to those same counterparts : `icd`, `ipwd`, `ils`, and `irm` do pretty much what you'd think -- the difference being that they navigate, orient, and inform you in terms of your current position and environment within the hierarchy of iRODS collections  and data objects, rather than a Unix filesystem . `iput` is another important one which can take a file from your current Unix directory and place it into iRODS as a data object.
+
+Now, to verify there is a running iRODS server on your machine, you can first open a terminal window and take the following steps:
 
 * This command should allow you to become `irods` "service account" (ie. admin) user:  `sudo su - irods`
 
