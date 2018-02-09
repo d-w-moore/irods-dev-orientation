@@ -18,4 +18,4 @@ To verify there is a running iRODS server on your machine, you can first open a 
 
 ---
 <A name="endsection"></A>
-Assuming you [cloned](http://slides.com/irods/ugm2017-getting-started#/2) the [irods_training](https://github.com/irods/irods_training) repository while working through the last section, your next step should be  read and work throught the examples presented there.
+Assuming you [cloned](http://slides.com/irods/ugm2017-getting-started#/2) the [irods_training](https://github.com/irods/irods_training) repository while working through the last section, your next step should be read the beginner training contained therein, and work throught the examples presented in that document.
