@@ -8,7 +8,7 @@ In many cases similar their un\*x-like cousins (except for a prepended 'i' in th
 
 ---
 
-To verify there is a running iRODS server on your machine, you can first open a terminal window and take the following steps:
+To verify the iRODS server is running on your machine, you can open a terminal window and take the following steps:
 
 * The command `sudo su - irods` should allow you to become the `irods` "service account" (ie. admin) user.
 
