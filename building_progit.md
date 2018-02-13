@@ -1,6 +1,16 @@
-# Building the 'git' online book
+# Git - the online book
 
 ## *('Pro Git 2' by Scott Chacon and Ben Straub)*
+
+---
+
+## Website and the complete book online
+
+https://git-scm.com/book/en/v2
+
+---
+
+## Building the e-book for local reading
 
 First make sure you have installed `git` itself:  
 ```
