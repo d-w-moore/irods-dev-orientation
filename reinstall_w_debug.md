@@ -55,11 +55,11 @@ At this point we want to create local copies of the iRODS's core/server repo and
   `mkdir -p ~/github && cd ~/github`  
 Now we use `git`'s' sub-command`clone` to duplicate each of two source code trees we'll be building:  
   `git clone http://github.com/irods/irods`  
-  `git clone http://github.com/irods/irods-client-icommands`  
+  `git clone http://github.com/irods/irods_client_icommands`  
 
-This creates the directories `irods` and `irods-client-icommands`; we'll descend now into each  one and check out the 4-2-stable branch, as well as initializing any related submodules:
+This creates the directories `irods` and `irods_client_icommands`; we'll descend now into each  one and check out the 4-2-stable branch, as well as initializing any related submodules:
 ```
-for d in irods irods-client-icommands; do
+for d in irods irods_client_icommands; do
   (cd "$d" && git checkout 4-2-stable && \
   git submodule update --init
   )
@@ -67,7 +67,7 @@ done
 ```
 Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source:
 ```
-for d in irods irods-client-icommands; do
+for d in irods irods_client_icommands; do
   mkdir bld__$d && (
      cd bld__$d && cmake -D'CMAKE_BUILD_TYPE=Debug' -GNinja ../$d
   ) || { echo >&2 "fail to create or setup build for '$d'"; break; }
