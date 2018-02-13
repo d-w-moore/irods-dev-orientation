@@ -24,6 +24,7 @@ A guide for developers who want to work with/on iRODS source
     * Using the rr debugger
 
 - [Appendix](./appendix.md)
-    * thing one
-    * OpenVPN installation
+
+    * [Helpful `bash` prompt annotations](./appendix.md#A)
+    * [Downloading / Running OpenVPN](./appendix.md#B)
     
