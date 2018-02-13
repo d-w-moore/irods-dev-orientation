@@ -29,7 +29,10 @@ Once these lines are added, continue by bringing up a new command window or doin
 # Part B. Running `openvpn` for access to firewalled servers and VM's
 
 - MacOS  
-  ...
+    1. On your first accessing the https://vpn.renci.org web-page, you will be prompted to download a OpenVPN Connect `.dmg` file.
+    1. Clicking on this file will most likely fail to install the software the first time, as MacOS guards against developers it doesn't recognize. Solve this problem by opening the `System Preferences` dialog and going to the `General` settings tab.  Your computer will remember the attempt to install the OpenVPN package, and will offer the option to install it after all.  Click through, as the folks at OpenVPN are not rogue developers....
+    1. Subsequent openings of the above-mentioned URL should offer a 'connect' or 'login', and you'll want to choose the former after entering your credentials.
+    
 - Linux  
   ...
 - MS Windows  
