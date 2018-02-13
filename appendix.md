@@ -1,4 +1,7 @@
 # APPENDIX
+
+---
+
 <A name="part-A"> </A>
 ## Part A. Helpful `bash` prompt annotations
 
@@ -26,7 +29,10 @@ Once these lines are added, continue by bringing up a new command window or doin
 - the status relative to changes that might need to be `add`ed or `commit`ed to save work done in the repository
 - the return code (highlighted in red) from the last command issued on the command line.
 
-# Part B. Running `openvpn` for access to firewall-protected RENCI servers and VM's
+---
+
+<B name="part-B"> </B>
+## Part B. Running `openvpn` for access to firewall-protected RENCI servers and VM's
 
 OpenVPN is available on a variety of platforms. Once installed and enabled, it will allow you to connect to RENCI-internal servers which would otherwise be unavailable from outside the office spaces.  In order to download and use OpenVPN, the first step is to navigate to  https://vpn.renci.org , and enter your credentials (RENCI username and password.)  
 
