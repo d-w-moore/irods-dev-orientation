@@ -66,11 +66,10 @@ for d in irods irods_client_icommands; do
 done
 ```
 Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source:
-```
-for d in irods irods_client_icommands; do
-  mkdir bld__$d && (
-     cd bld__$d && cmake -D'CMAKE_BUILD_TYPE=Debug' -GNinja ../$d
-  ) || { echo >&2 "fail to create or setup build for '$d'"; break; }
-done
-```
+
+`d=irods`  
+`mkdir bld__$d && cd bld__$d`  
+`cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d`  
+`cd ..`  
+
 *NOTE* - a beneficial effect of using **cmake** to build "outside the source" - effectively is to keep the repository itself "clean" - so git doesn't need to be confused by the presence of a multitude of files resulting from the build.
