@@ -40,5 +40,37 @@ and use the following line to update the bash PATH for picking up the external' 
 ```
 echo "export PATH=$(ls -d /opt/irods-externals/cmake*/bin):\$PATH" |tee -a ~/.bashrc
 ```
+Again, the command `exec bash` will enable this change to `PATH`  in the current terminal window, and future logins and bash sessions will pick it up automatically.
 
+---
 
+## Setting up the build
+
+Let us first make sure the `ninja-build` package is installed.  This is a cousin to `make` but highly optimized to take advantage of multiple CPU cores.
+```
+sudo apt-get install ninja-build
+```
+
+At this point we want to create local copies of the iRODS's core/server repo and icommands repo on GitHub.  Let's create and situate ourselves in a convenient parent directory first - for purposes of the description here, we will assume it to be `github` subdirectory of our `$HOME` directory:  
+  `mkdir -p ~/github && cd ~/github`  
+Now we use `git`'s' sub-command`clone` to duplicate each of two source code trees we'll be building:  
+  `git clone http://github.com/irods/irods`  
+  `git clone http://github.com/irods/irods-client-icommands`  
+
+This creates the directories `irods` and `irods-client-icommands`; we'll descend now into each  one and check out the 4-2-stable branch, as well as initializing any related submodules:
+```
+for d in irods irods-client-icommands; do
+  (cd "$d" && git checkout 4-2-stable && \
+  git submodule update --init
+  )
+done
+```
+Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source:
+```
+for d in irods irods-client-icommands; do
+  mkdir bld__$d && (
+     cd bld__$d && cmake -D'CMAKE_BUILD_TYPE=Debug' -GNinja ../$d
+  ) || { echo >&2 "fail to create or setup build for '$d'"; break; }
+done
+```
+*NOTE* - a beneficial effect of using **cmake** to build "outside the source" - effectively is to keep the repository itself "clean" - so git doesn't need to be confused by the presence of a multitude of files resulting from the build.
