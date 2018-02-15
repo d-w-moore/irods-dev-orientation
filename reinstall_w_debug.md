@@ -29,16 +29,21 @@ sudo apt-get remove irods-{dev,runtime}
 ```
 (Because all other iRODS packages depend on these two , this minimal command will do all of our uninstalling work for us.)
 
-It will also behoove us to remove all remnants of configuration files from the system.  We can do it thus:
+It will also behoove us to remove all remnants of the previous server configuration contained in:  
+- ICAT content ...  
 ```
-sudo rm -fr /etc/irods /var/lib/irods /tmp/irods*
+sudo su - postgres -c "dropdb --if-exists ICAT && createdb ICAT"
+```
+- *and* system files  
+```
+sudo rm -fr /etc/irods /var/lib/irods /tmp/irods/
 ```
 
-In order to be able to build the iRODS core and icommands packages, we will need certain **iRODS externals** including most notably cmake and clang/clang++. So we now install these:
+In order to be able to build the iRODS core / server code and command line client icommands , we will need certain packages called the **iRODS externals** (these constitute libraries and a toolchain includeing, most notably, `cmake` and the `clang` C/C++ compilers):
 ```
 sudo apt-get install irods-externals\*
 ```
-and use the following line to update the bash PATH for picking up the external' version of cmake :
+Now use the following line to update the bash PATH for picking up the external' version of cmake :
 ```
 echo "export PATH=$(ls -d /opt/irods-externals/cmake*/bin):\$PATH" |tee -a ~/.bashrc
 ```
@@ -82,14 +87,40 @@ cd bld__irods ; ninja package
 ```
 This will take a while, but once it is done, a number  of `*.deb` packages will exist, typically named something like
 ```
-irods-database-plugin-mysql_4.2.2~trusty_amd64.deb   irods-database-plugin-postgres_4.2.2~trusty_amd64.deb  irods-runtime_4.2.2~trusty_amd64.deb
-irods-database-plugin-oracle_4.2.2~trusty_amd64.deb  irods-dev_4.2.2~trusty_amd64.deb                       irods-server_4.2.2~trusty_amd64.deb
-
-
+irods-database-plugin-mysql_4.2.2~trusty_amd64.deb   
+irods-database-plugin-postgres_4.2.2~trusty_amd64.deb  
+irods-runtime_4.2.2~trusty_amd64.deb
+irods-database-plugin-oracle_4.2.2~trusty_amd64.deb  
+irods-dev_4.2.2~trusty_amd64.deb                       
+irods-server_4.2.2~trusty_amd64.deb
+```
+Before going to the next compilation  step (that of building the **icommands**) we want to install the `dev` and `runtime` packages:
+```
+dpkg -i irods-{dev,runtime}*.deb
+```
+We now `cd ../bld__irods_client_icommands` and repeat the package building step:
+```
+ninja package
+```
+followed by
+```
+dpkg -i irods-icommands*.debug
+```
+Since the *icommands* are actually required for installing the iRODS server proper.
+Change directories back to the place of our previous build:
+```
+cd ../bld__irods
+dpkg -i irods-server*.deb irods-database-plugin-postgres*.deb
+```
+At this point we can return to a fully iRODS-enabled system using the old stand-by :
+```
+sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/localhost_setup_postgres.input
 ```
 
+---
+Footnotes
 
-___
+
 <A name="footnote1"><sup>1</sup></A>A better long-term solution is perhaps the following:  append the following code to your `~/.bash_profile` :
 ```
 if [ -d  /opt/irods-externals ] ;  then
