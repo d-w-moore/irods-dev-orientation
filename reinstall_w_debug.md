@@ -65,7 +65,7 @@ done
 ```
 Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source.
 
-*NOTE* - a beneficial effect of using **cmake** to build "outside the source" - effectively is to keep the repository itself "clean" - so git doesn't need to be confused by the presence of a multitude of files resulting from the build.
+*NOTE* - a beneficial effect of using **cmake** to build "outside the source"  is essentially to keep the repository itself "clean" - so git doesn't need to be confused by the presence of a multitude of files resulting from the build.
 
 With this in mind, set a dummy `bash` variable `d`:  
 `d=irods`  
