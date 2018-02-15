@@ -87,7 +87,7 @@ irods-dev_4.2.2~trusty_amd64.deb
 irods-server_4.2.2~trusty_amd64.deb
 ```
 Before going on to the next compilation  step we want to install the `dev` and `runtime` packages:  
-`dpkg -i irods-{dev,runtime}*.deb`  
+`sudo dpkg -i irods-{dev,runtime}*.deb`  
 and then exit that directory:  
 `cd ..`  
 
@@ -101,14 +101,14 @@ ninja package
 ```
 With that success, we can install the resulting package as well:
 ```
-dpkg -i irods*icommands*.deb
+sudo dpkg -i irods*icommands*.deb
 ```
 
 Since the *icommands* are actually required for installing the iRODS server proper.
 we'll change directories back to the place of our previous build:
 ```
 cd ../bld__irods
-dpkg -i irods-server*.deb irods-database-plugin-postgres*.deb
+sudo dpkg -i irods-server*.deb irods-database-plugin-postgres*.deb
 ```
 At this point we can return to a fully iRODS-enabled system using the old stand-by :
 ```
