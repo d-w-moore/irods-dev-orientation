@@ -72,20 +72,21 @@ for d in irods irods_client_icommands; do
   )
 done
 ```
-Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source:
-
-`d=irods`  
-`mkdir bld__$d && cd bld__$d`  
-`cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d`  
-`cd ..`  
+Now we create parallel directories in which to actually generate all intermediate files as well as the `.deb` (Debian) package files that will ultimately result when we build from the source.
 
 *NOTE* - a beneficial effect of using **cmake** to build "outside the source" - effectively is to keep the repository itself "clean" - so git doesn't need to be confused by the presence of a multitude of files resulting from the build.
 
-The next step is to `cd` into the build directory for the iRODS core and server code and compile it to package form:
+With this in mind, set a dummy `bash` variable `d`:  
+`d=irods`  
+and follow up with the boilerplate commands below:
 ```
-cd bld__irods ; ninja package
+mkdir bld__$d && cd bld__$d  && \
+cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \  
+ninja package  
 ```
-This will take a while, but once it is done, a number  of `*.deb` packages will exist, typically named something like
+which should build all of the iRODS core code, including ICAT server, runtime, development support files, and plugins.
+
+This will take a while, but once it is done, a number  of `*.deb` packages will have been created, typically named something like:
 ```
 irods-database-plugin-mysql_4.2.2~trusty_amd64.deb   
 irods-database-plugin-postgres_4.2.2~trusty_amd64.deb  
@@ -94,20 +95,26 @@ irods-database-plugin-oracle_4.2.2~trusty_amd64.deb
 irods-dev_4.2.2~trusty_amd64.deb                       
 irods-server_4.2.2~trusty_amd64.deb
 ```
-Before going to the next compilation  step (that of building the **icommands**) we want to install the `dev` and `runtime` packages:
+Before going on to the next compilation  step we want to install the `dev` and `runtime` packages:  
+`dpkg -i irods-{dev,runtime}*.deb`  
+and then exit that directory:  
+`cd ..`  
+
+We now repeat the package building step for the **icommands** build:  
+`d=irods_client_icommands`   
+and again the boilerplate:
 ```
-dpkg -i irods-{dev,runtime}*.deb
+mkdir bld__$d && cd bld__$d  && \
+cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \  
+ninja package  
 ```
-We now `cd ../bld__irods_client_icommands` and repeat the package building step:
+With that success, we can install the resulting package as well:
 ```
-ninja package
+dpkg -i irods*icommands*.deb
 ```
-followed by
-```
-dpkg -i irods-icommands*.debug
-```
+
 Since the *icommands* are actually required for installing the iRODS server proper.
-Change directories back to the place of our previous build:
+we'll change directories back to the place of our previous build:
 ```
 cd ../bld__irods
 dpkg -i irods-server*.deb irods-database-plugin-postgres*.deb
