@@ -72,7 +72,7 @@ With this in mind, set a dummy `bash` variable `d`:
 and follow up with the boilerplate commands below:
 ```
 mkdir bld__$d && cd bld__$d  && \
-cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \  
+cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \
 ninja package  
 ```
 which should build all of the iRODS core code, including ICAT server, runtime, development support files, and plugins.
@@ -96,7 +96,7 @@ We now repeat the package building step for the **icommands** build:
 and again the boilerplate:
 ```
 mkdir bld__$d && cd bld__$d  && \
-cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \  
+cmake -DCMAKE_BUILD_TYPE=Debug -GNinja ../$d && \
 ninja package  
 ```
 With that success, we can install the resulting package as well:
