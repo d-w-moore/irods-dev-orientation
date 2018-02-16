@@ -119,7 +119,7 @@ sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/loc
 Footnotes
 
 
-<A name="footnote1"><sup>1</sup></A>A better long-term solution is perhaps the following:  append the following code to your `~/.bash_profile` :
+<A name="footnote1"><sup>1</sup></A>A better long-term solution is to append the following code to your `~/.bash_profile` :
 ```
 if [ -d  /opt/irods-externals ] ;  then
   while read d ; do
