@@ -119,14 +119,12 @@ sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/loc
 Footnotes
 
 
-<A name="footnote1"><sup>1</sup></A>A better long-term solution is to append the following code to your `~/.bash_profile` :
+<A name="footnote1"><sup>1</sup></A> To be more sensitive to system environment, and moreresilient in the face of version updates, a better long-term addition to `~/.bashrc` might be:
 ```
-if [ -d  /opt/irods-externals ] ;  then
+if [ -d /opt/irods-externals ] && [[ ! ($PATH =~ /opt/irods-externals) ]] ; then
   while read d ; do
         export PATH="$d:$PATH"
-  done < <(
-        bash -O failglob -c \
-        "ls -d /opt/irods-externals/{cmake,clang}*/bin" 2>/dev/null
-  )
+  done < <(ls -d /opt/irods-externals/{cmake,clang}*/bin" 2>/dev/null)
 fi
 ```
+And note that this also adds `clang` and `clang++` into your PATH, as well as `cmake`.
