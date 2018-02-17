@@ -124,7 +124,7 @@ Footnotes
 if [ -d /opt/irods-externals ] && [[ ! ($PATH =~ /opt/irods-externals) ]] ; then
   while read d ; do
         export PATH="$d:$PATH"
-  done < <(ls -d /opt/irods-externals/{cmake,clang}*/bin" 2>/dev/null)
+  done < <(ls -d /opt/irods-externals/{cmake,clang}*/bin 2>/dev/null)
 fi
 ```
 And note that this also adds `clang` and `clang++` into your PATH, as well as `cmake`.
