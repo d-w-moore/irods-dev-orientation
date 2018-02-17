@@ -119,7 +119,7 @@ sudo python /var/lib/irods/scripts/setup_irods.py < /var/lib/irods/packaging/loc
 Footnotes
 
 
-<A name="footnote1"><sup>1</sup></A> To be more sensitive to system environment, and moreresilient in the face of version updates, a better long-term addition to `~/.bashrc` might be:
+<A name="footnote1"><sup>1</sup></A> To be more sensitive to system environment, and more resilient in the face of upgrades, an improved addition to `~/.bashrc` might be:
 ```
 if [ -d /opt/irods-externals ] && [[ ! ($PATH =~ /opt/irods-externals) ]] ; then
   while read d ; do
