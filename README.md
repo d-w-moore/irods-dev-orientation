@@ -14,7 +14,9 @@ A guide for developers who want to work with/on iRODS source
 
 ...  
 
-- **b** git and GitHub
+- **b** `git` and [GitHub](http://github.com)
+    * [Basic `git`](./git-usage.md#basics)
+    * [`git` pointers](./git-usage.md#pointers)
     * [Downloading and Building the "Pro Git 2" e-book](./building_progit.md)
 
 ...
@@ -23,8 +25,8 @@ A guide for developers who want to work with/on iRODS source
     * [Building the latest 'rr' debugger](./rr.md)
     * Using the rr debugger
 
+
 - [Appendix](./appendix.md)
 
     * [Helpful `bash` prompt annotations](./appendix.md#A)
     * [Downloading / Running OpenVPN](./appendix.md#B)
-    
