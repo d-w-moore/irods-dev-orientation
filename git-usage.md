@@ -3,38 +3,34 @@
 
 <A name="basics"> </A>
 
----
-
-
 Git basics:
 ---
 
-### what's what
-`git` and all of its subcommands are the essentials here.
-
-`tig` is a TUI for checking your revision history and status and is more in the "nice-to-have" category, but we shall assume in the following examples that you have it.   
-
 ### Installing
 
-
-Make sure you have the `git` and `tig` binaries installed.  
+ install `git` and `tig` binaries:  
 
 ```
 sudo apt-get install git tig
 ```
-create an example repo for your own experiments:
+
+### Basic usage
 ```
 mkdir myrepo ; cd myrepo ; git init
-```
-Now you have a place to put your new project. Create a `.c` file:
-```
+
 echo 'main(){}' >> mainfn.c
 ```
-and check your status with:
 ```
-git status
+git status # -> tell about unstaged changes
+git add .  # -> stage everything from '.' recursively
 ```
-`git` will tell you there are unstaged changes , meaning you need to tell it
+
+### Usage with GitHub:
+
+(Go to GitHub, create an account)
+git push
+
+
 
 
 ---

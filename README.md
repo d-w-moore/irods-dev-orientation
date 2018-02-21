@@ -25,6 +25,8 @@ A guide for developers who want to work with/on iRODS source
     * [Building the latest 'rr' debugger](./rr.md)
     * Using the rr debugger
 
+**d** misc
+
 
 - [Appendix](./appendix.md)
 
