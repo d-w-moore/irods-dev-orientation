@@ -1,7 +1,7 @@
 # Reinstalling iRODS from source
 
 
-The most valuable instructive step to be taken from this point is to reinstall the iRODS server and icommands packages with Debug symbols enabled. Doing this will allow us later to step through commands under GDB as they're being executed, and even peek into the internal workings of the software.
+The most valuable instructive step to be taken from this point is to reinstall the iRODS server and icommands packages with Debug symbols enabled. Doing this will allow us to step through commands under GDB as they're being executed, and even peek into the internal workings of the software.
 
 There's even a tool we will use later --called "rr" (record/replay) --  which allows us to fully record and then *replay*  (ie. deterministically "debug" in an environment almost identical to GDB's) the operations performed by the iRODS server during the *record* operation. You can even do reverse execution, that is undo steps, function "finishes", set reverse-run breakpoints, etc.
 
