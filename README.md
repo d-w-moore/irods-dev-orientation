@@ -1,7 +1,8 @@
 # irods-dev-orientation
 
-A guide for developers who want to work with/on iRODS source
-=======================================================================
+A guide for developers who want to further work on iRODS 
+========================================================
+
 - [Chapter 1 - iRODS fundamentals]
     * [Setting up your machine and installing the iRODS binaries](./setup_00.md)
     * [Testing the running server](./one.md)
@@ -25,7 +26,9 @@ A guide for developers who want to work with/on iRODS source
     * [Building the latest 'rr' debugger](./rr.md)
     * Using the rr debugger
 
-**d** misc
+- **d** Virtual Machine stuff
+    * [installing QEMU/KVM](http://www.ubuntubuzz.com/2016/05/how-to-install-kvm-with-gui-virt-manager-in-ubuntu.html)
+    
 
 
 - [Appendix](./appendix.md)
