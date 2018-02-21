@@ -20,7 +20,7 @@ mkdir myrepo ; cd myrepo ; git init
 
 echo 'main(){}' >> mainfn.c
 ```
-(Oh wait, we want to eventually sync this repo with one on [GitHub](http://github.com), with the same name, making it public!) Go to GitHub, create an account if you haven't already. Create a repo on GitHub, we'll assume the URL is something like:   
+(Oh wait, we want to eventually sync this repo with one by the same name on [GitHub](http://github.com) making it public!) Go to GitHub, create an account if you haven't already. Create a repo on GitHub, we'll assume the URL is something like:   
   `http://github.com/<yourUserName>/myrepo`
 
 Among the steps below, the `commit` in particular demands we have a GitHub user name and e-mail set up. So set those up, either in this repo (in `./.git/config`) or using --global to put it in the config file for all repos you'll create on your machine (in `~/.gitconfig`):
@@ -36,7 +36,7 @@ tig  #__ shows first commit
 ```
 Now that the local commit is made, you can make a connection to GitHub and mirror your changes there via:
 ```
-git remote add origin git@github.com:d-w-moore/myrepo.git
+git remote add origin git@github.com:yourUserName/myrepo.git
 git push -u origin master
 ```
 
