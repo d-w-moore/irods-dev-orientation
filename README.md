@@ -27,7 +27,8 @@ A guide for developers who want to further work on iRODS
     * Using the rr debugger
 
 - **d** Virtual Machine stuff
-    * [installing QEMU/KVM](http://www.ubuntubuzz.com/2016/05/how-to-install-kvm-with-gui-virt-manager-in-ubuntu.html)
+    * installing QEMU-KVM(./vm.md#QemuKvm)
+    * [Other notes : QEMU-KVM / virtualbox / docker](./vm.md)
     
 
 
