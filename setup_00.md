@@ -1,4 +1,4 @@
-# Setting up to install an iRODS Development Environment 
+# Setting up to install an iRODS Development Environment
 
 Prerequisites
 -------------
@@ -6,20 +6,21 @@ Prerequisites
 We need only :
 
 * a familiarity with basic Linux commands and the ability to launch a terminal window.
-* an open (aka open-source-friendly) and all-absorbing mind. 
-* some solid programming experience in C++  and/or Python
-* an Intel-based machine constructed in the 21st century 
+* an ready and open (aka open-source-friendly) mind.
+* some solid programming experience in C++ and/or Python
+* an Intel-based machine constructed in the 21st century
 * an internet connection
- 
+
 Contents and Purpose of This Documentation
 ----------
-The aim and narrative of this guide are from the standpoint of a new software support/development professional on Renci's (Renaissance Computing Institute's) iRODS Consortium development team.  Yours truly, that same employee and the author of this guide, is still getting up to speed at the time of this writing , a month into the orientation process, and would like to be a help to others finding themselves in the same lucky position. Of course, the open-source way of doing things will be new to many developers, even some who've been working in the software industry for years.
+The general aim of this guide is to give some cues and clues for learning the fundamentals of "how software is done" at [RENCI](http://renci.org)'s [iRODS Consortium](http://irods.org), where the core development and engineering work is done on **iRODS** (Ithe *integrated Rule-Oriented Data System*) and some of its peripheral parts (whether plugins or contributions outside teams that might be in the process of integration).  In fact the author of this guide started not very long ago on the iRODS team and is still going through a lot of learning and adaptation at the time of this writing, hence the perceived need to write some of the "developer orientation" down for others down the line who might also find themselves in that same lucky position!  Of course, if you're not working directly on or with the core iRODS team but are finding it has potential applications for you; or, if you simply enjoy some educational playing-around with open source software - you still might very well find some of these instructions pages useful.
 
-Even if you're not working directly on the iRODS core team, you might still find these to be valuable instructions if you're looking to develop on / improve / play with / "bang on" some iRODS .... good luck!
+Whatever the case, dear reader, the author wishes you a successful and joyous development experience.
+
 
 Quick Start Guide : Installing Ubuntu
 -----------------
-Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will be using either "Rufus" (an MS Windows tool) or "etcher-electron" - which should work on any Linux platform - to give you the boot image on a USB-insertable flash drive.
+Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will probably be using either "Rufus" (an MS Windows tool) or "etcher-electron" - which should work on any Linux platform - to give you the boot image on a USB-insertable flash drive.
 
 In the case of etcher, that good person who's undertaken to help in getting your workstation set up can do the following:
 * make sure an .ISO image of **Ubuntu14.04.5 LTS** (from `ubuntu.com` )is on the machine doing the 'burning'
