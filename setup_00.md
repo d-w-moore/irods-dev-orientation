@@ -11,17 +11,10 @@ We need only :
 * an Intel-based machine constructed in the 21st century
 * an internet connection
 
-Contents and Purpose of This Documentation
-----------
-The general aim of this guide is to give some cues and clues for learning the fundamentals of "how software is done" at [RENCI](http://renci.org)'s [iRODS Consortium](http://irods.org), where the core development and engineering work on **iRODS** (the *integrated Rule-Oriented Data System*) takes place.  The author of this guide started not very long ago on the iRODS team and, in the inevitable process of learning and adaptation, has relied pretty heavily on the time and attention of his more experienced teammates.  Therefore, it seemed expeditious to write down some tips, procedures, and lessons learned -- for others down-the-line  who find themselves in the same lucky position of becoming part of the effort to further iRODS!  
 
-If you're reading this because you have joined the core iRODS dev team; or, if you're finding it has potential applications for you; or if you simply enjoy some educational playing-around with open source software, you still might find it helpful to peruse or work through some of the instructions included here.
-
-Whatever the case, dear reader, the author hopes you find your first experiences with development in the iRODS environment to be edifying, joyful, and successful!
-
-
-Quick Start Guide : Installing Ubuntu
+Quick Start: Installing Ubuntu Linux and Getting Started with iRODS
 -----------------
+
 Get the help of someone who's already initiated if you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will probably be using either "Rufus" (an MS Windows tool) or "etcher-electron" - which should work on any Linux platform - to give you the boot image on a USB-insertable flash drive.
 
 In the case of etcher, that good person who's undertaken to help in getting your workstation set up can do the following:
