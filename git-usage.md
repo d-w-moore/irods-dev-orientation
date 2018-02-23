@@ -20,14 +20,15 @@ mkdir myrepo ; cd myrepo ; git init
 
 echo 'main(){}' >> mainfn.c
 ```
-(Oh wait, we want to eventually sync this repo with one by the same name on [GitHub](http://github.com) making it public!) Go to GitHub, create an account if you haven't already. Create a repo on GitHub, we'll assume the URL is something like:   
+(Oh wait, we want to eventually sync this repo with one by the same name on [GitHub](http://github.com) making it public!) Go to GitHub, create an account if you haven't already. Create a repo on GitHub, we'll assume the URL is something like:
   `http://github.com/<yourUserName>/myrepo`
 
-Among the steps below, the `commit` in particular demands we have a GitHub user name and e-mail set up. So set those up, either in this repo (in `./.git/config`) or using --global to put it in the config file for all repos you'll create on your machine (in `~/.gitconfig`):
+Among the steps to be taken to save our first work, git's `commit` subcommand in particular demands we have a GitHub user name and e-mail set up. So set those up, either local to this repo folder (in `./.git/config`) or using `--global` to effectively edit the config file for all repos you'll create on your machine (in `~/.gitconfig`):
 ```
-  git config [--global] user.name <yourUserName>
-  git config [--global] user.email <yourGitHubAssociatedEMAIL>
+git config [--global] user.name <yourUserName>
+git config [--global] user.email <yourGitHubAssociatedEMAIL>
 ```
+With the above done in your repo, you can commit the first changes:
 ```
 git status # -> tell about unstaged changes
 git add .  # -> stage everything from '.' recursively
@@ -43,14 +44,18 @@ git push -u origin master
 ---
 <A name="pointers"> </A>
 
-You can add your own fork of another project on GitHub, say [iRODS](http://github.com/irods/irods), and after cloning your fork locally on your machine for development / debugging purposes, add the upstream repo (the source for the fork) for pull requests.
+### Setup for projects on which you don't have GitHub `push` access
 
-Changes you make to your own fork can be synced with upstream (using `git pull --rebase`), then formalized into a pull request to the maintainer(s) of the upstream repo.
+You can add your own fork of another project on GitHub, say [iRODS](http://github.com/irods/irods), and after cloning your fork locally on your machine for development / debugging purposes, add the aforementioned upstream repo to your `git` config for pull requests.
+
+(That is, you'll make changes to your own fork of the project and those can be synced with upstream using `git pull --rebase`, and then formalized into a pull request to the maintainer(s) of the upstream repo.)
 
 The configuration changes for your local repo directory can be made using instructions from here:
 
 [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
 
 *Note also:*
-- `git rebase -i` can (should!) be used to squash a number of changes along a branch before rebasing / pushing / cherry-picking
-- feature branches are cheap to create and can simplify the process of merging (oh-oh, faux pas - we like to rebase here as a rule, rather than doing raw merges! :) )
+
+- feature branches are cheap to create and can simplify the process of merging with the work of other collaborators (oh-oh, faux pas - we like to rebase here as a rule, rather than doing raw merges! :) )
+
+- `git rebase -i` can (should, if the trail of commits is too long or "a different story needs to be told") be used to squash a number of changes along a branch before rebasing or cherry-picking your work onto `master` or some other main branch.
