@@ -9,8 +9,9 @@ A guide for developers who want to further work on iRODS
     * [Setting up your machine and installing the iRODS binaries](./setup_00.md)
     * [Testing the running server](./one.md)
     * [Building and Installing a new server](reinstall_w_debug.md)
+    
 
-- Chapter 2 - `git` and GitHub(http://github.com)
+- Chapter 2 - [git](https://git-scm.com/) and GitHub(http://github.com)
     * [Basic `git`](./git-usage.md#basics)
     * [`git` pointers](./git-usage.md#pointers)
     * [Downloading and Building the "Pro Git 2" e-book](./building_progit.md)  
