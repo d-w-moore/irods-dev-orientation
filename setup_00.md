@@ -1,4 +1,4 @@
-# Setting up to install an iRODS Development Environment
+# Setting up Linux and getting familiar with iRODS
 
 Prerequisites
 -------------
