@@ -56,6 +56,6 @@ The configuration changes for your local repo directory can be made using instru
 
 *Note also:*
 
-- feature branches are cheap to create and can simplify the process of merging with the work of other collaborators (oh-oh, faux pas - we like to rebase here as a rule, rather than doing raw merges! :) )
+- feature branches are cheap to create and can simplify the process of merging with the work of other collaborators (oh-oh, faux pas - we like to `rebase` here as a rule, rather than doing raw merges! :) )
 
 - `git rebase -i` can (should, if the trail of commits is too long or "a different story needs to be told") be used to squash a number of changes along a branch before rebasing or cherry-picking your work onto `master` or some other main branch.
