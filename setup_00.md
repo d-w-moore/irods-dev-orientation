@@ -15,7 +15,7 @@ We need only :
 Quick Start: Installing Ubuntu Linux and Getting Started with iRODS
 -----------------
 
-Get the help of someone who's already initiated as soon as you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will probably be using either "Rufus" (an MS Windows tool) or [etcher](https://www.techspot.com/downloads/6931-etcher.html) (which  works on Linux and MacOS X platforms) to give you the boot image on a USB-insertable flash drive.
+Get the help of someone who's already initiated as soon as you can. That person can set you up with Ubuntu 14 Linux on your PC - probably best done by burning a flash drive with the boot image. He/she will probably be using either [Rufus](https://rufus.akeo.ie/) (an MS Windows tool) or [etcher](https://www.techspot.com/downloads/6931-etcher.html) (which  works on Linux and MacOS X platforms) to give you the boot image on a USB-insertable flash drive.
 
 If the above-mentioned `etcher` is the tool of choice, the good person who's undertaken to help in getting your workstation set up can do the following:
 * make sure an .ISO image of **Ubuntu14.04.5 LTS** (from `ubuntu.com` )is on the machine doing the 'burning'
