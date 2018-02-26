@@ -53,7 +53,8 @@ Then follow the instruction below that corresponds to your choice of computing p
 
 ---
 
-## Part C. Jenkins / Build-a-Bear for
+<A name="part-C"> </A>
+## Part C. Jenkins / Build-a-Bear for Testing and CI  in a collaborative environment
 
 Thorough testing and Continuous Integration (CI) of new features encourages -- or demands, depending on the number of developers and/or active feature branches on a project -- an automated approach in order to ensure that these code changes do not interact destructively.  Once it's decided to automate testing of such things, it's a straightforward decision to extend the testing to ensuring the software, including projected changes, runs as expected on all of the different use cases and computing platforms for which it has been promised to run.
 
@@ -83,8 +84,7 @@ echo "------ Build-a-Bear Parameters ------"
 echo ${TARGETPATH}
 cd ${SOURCEPATH}
 git rev-parse HEAD
-    ```
-
+```
 And the NFS mount is accessed with an addition to `etc/fstab` of the following line:
 ```
 na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize=65536,wsize=65536 0 0
