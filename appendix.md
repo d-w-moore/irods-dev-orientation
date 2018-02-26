@@ -64,7 +64,7 @@ Enter "Build-a-Bear".
 
 Build-a-Bear, as it's known among core iRODS team, is a system of scripts that allows developers to push a custom build or set of changes from a local directory (ie git repo), to be build and tested prior to making them potentially official with a pull request. The steps in using it are roughly:
 
-Sync your local `git` repo to an NFS-mounted directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script typically kept by team members in (*syncbuildabear*)[./syncbuildabear.sh]. The script is of the form:
+Sync your local `git` repo to an NFS-mounted directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script typically kept by team members in [*syncbuildabear*](./syncbuildabear.sh). The script is of the form:
 
 
 And the NFS mount is accessed with an addition to `etc/fstab` of the following line:
