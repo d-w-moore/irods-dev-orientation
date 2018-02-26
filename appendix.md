@@ -64,27 +64,9 @@ Enter "Build-a-Bear".
 
 Build-a-Bear, as it's known among core iRODS team, is a system of scripts that allows developers to push a custom build or set of changes from a local directory (ie git repo), to be build and tested prior to making them potentially official with a pull request. The steps in using it are roughly:
 
-Sync your local `git` repo to an NFS-mounted directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script typically kept by team members in `~/bin/syncbuildabear`. The script is of the form:
+Sync your local `git` repo to an NFS-mounted directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script typically kept by team members in (*syncbuildabear*)[./syncbuildabear.sh]. The script is of the form:
 
-```
-#!/bin/bash -e
 
-########################
-# iRODS Build-a-Bear v4
-# Save as ~/bin/syncbuildabear
-########################
-
-BUILDHOST=build-ub12.irods.renci.org
-SOURCEPATH=/home/danm/Tmp/irods
-TARGETPATH=/projects/irods/personal-testing-repos/dmoore/irods
-
-echo "Syncing irods to ${BUILDHOST}..."
-rsync -rlt --delete ${SOURCEPATH}/.git/ dmoore@${BUILDHOST}:${TARGETPATH}/.git/
-echo "------ Build-a-Bear Parameters ------"
-echo ${TARGETPATH}
-cd ${SOURCEPATH}
-git rev-parse HEAD
-```
 And the NFS mount is accessed with an addition to `etc/fstab` of the following line:
 ```
 na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize=65536,wsize=65536 0 0
