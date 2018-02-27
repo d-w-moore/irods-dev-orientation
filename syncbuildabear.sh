@@ -8,7 +8,7 @@
 ########################
 
 BUILDHOST=build-ub12.irods.renci.org
-SOURCEPATH=/home/danm/Tmp/irods
+SOURCEPATH=/home/${USERNAME:=`id -un`}/Tmp/irods
 TARGETPATH=/projects/irods/personal-testing-repos/dmoore/irods
 
 echo "Syncing irods to ${BUILDHOST}..."
