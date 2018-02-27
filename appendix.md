@@ -3,9 +3,10 @@
 ---
 
 <A name="part-A"> </A>
+
 ## Part A. Helpful `bash` prompt annotations
 
-The following lines, appended to the `~/.bashrc` file, can be useful when working on the `bash` command line to do software development, and can particularly expedite tasks while using `git` to manage version control:
+The following lines, appended to the `~/.bashrc` file, can be useful when working on the `bash` command line to do software development, and can particularly expedite tasks while using `git` to manage version control:  
 
 ```
 function tgrps1 {
@@ -21,7 +22,7 @@ function tgrps1 {
   PS1+="$BOLDCYAN\u$NOCOLOR@\h:\w \$ "
 }
 tgrps1
-```
+```  
 
 Once these lines are added, continue by bringing up a new command window or doing an `exec bash` within the current one, and the command prompt should now reflect:
 
@@ -60,7 +61,8 @@ na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize
 ```
 
 <A name="part-D"> </A>
-## Part C. Jenkins / Build-a-Bear for Testing and CI  in a collaborative environment
+
+## Part D. Jenkins and Build-a-Bear for Testing and CI  in a collaborative environment
 
 Thorough testing and Continuous Integration (CI) of new features encourages -- or demands, depending on the number of developers and/or active feature branches on a project -- an automated approach in order to ensure that these code changes do not interact destructively.  Once it's decided to automate testing of such things, it's a straightforward decision to extend the testing to ensuring the software, including projected changes, runs as expected on all of the different use cases and computing platforms for which it has been promised to run.
 
@@ -70,5 +72,17 @@ Enter "Build-a-Bear".
 
 Build-a-Bear, as it's known to the core iRODS team, is a system of scripts that allows developers to push a custom build or set of changes from a local directory (ie git repo), to be build and tested prior to making them potentially official with a pull request. Usually the main repo pushed is one in which prospective changes have been made to iRODS server code for testing.  Presumably unit tests will also have been added to the code-base , in order to verify that the changes support the desired function (perhaps a new feature) and do not cause problems in pre-existing tests.
 
-Such a local `git` repo to an NFS-mounted directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script typically kept by team members in [*~/bin/syncbuildabear*](./syncbuildabear.sh). The lines in this script can be duplicated as necessary to sync more than one repo.  One SHA code will be printed for every repo as it is synchronized. 
+The changes need to have been committed in the local repository; then the repo can be synced to a shared directory visible to the Jenkins server (http://172.25.14.125:8080). This is done with a pre-formulated script customarily kept by team members in [*~/bin/syncbuildabear*](./syncbuildabear.sh). The lines in this script can be duplicated as necessary to sync more than one repo.  One SHA code will be printed for every repo as it is synchronized.
 
+The SHA printed out for each of your repos synced to B-a-B can be entered into the fields presented under **Jenkins -> Personal -> irods-build-and-test-workflow -> Build With Parameters** . In place of the "commit-ish" SHA you can also enter a version number such as "4-2-stable", for example.  You might do this for iRODS client icommands, if the local commit(s) you are testing correspond to that version but don't include a custom build for the icommands themselves.
+
+Keep in mind versions (latest production version at the last revision of this document is 4.2.2) currently must be equal across components. So the build ID you enter for different components of a complete iRODS system -- the icommands , the ICAT server and its plugins (soon also to be a part of Build-a-Bear tests !) in the fields pictured below need to be for matching versions.
+
+<A> <IMG src="./Jenkins.png">
+</A>  
+
+...  
+
+...
+
+  (*This section not yet finished*)
