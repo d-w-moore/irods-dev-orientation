@@ -64,7 +64,7 @@ na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize
 
 ## Part D. Jenkins and Build-a-Bear for Testing and CI  in a collaborative environment
 
-Thorough testing and Continuous Integration (CI) of new features encourages -- or demands, depending on the number of developers and/or active feature branches on a project -- an automated approach in order to ensure that these code changes do not interact destructively.  Once it's decided to automate testing of such things, it's a straightforward decision to extend the testing to ensuring the software, including projected changes, runs as expected on all of the different use cases and computing platforms for which it has been promised to run.
+Thorough testing and Continuous Integration (CI) of new features encourages -- or demands, depending on the number of developers and/or active feature branches on a project -- an automated approach in order to ensure that these code changes do not interact destructively.  Once it's decided to automate testing of such things, it's a straightforward decision to extend the testing to ensuring the software, including projected changes, runs as expected on all of the different computing platforms for which it has been promised to run.
 
 And so it is also for the iRODS core software: before a feature or code fix is added to the official code-base on GitHub, it is first staged and tested on a [Jenkins](http://jenkins.io) server where a system of automatic tests vet the change automatically - not only against the built-in system of unit tests, but also across the comprehensive list of operating systems iRODS supports. (These are currently Centos6 and 7, and Ubuntu 12,14, and 16).
 
