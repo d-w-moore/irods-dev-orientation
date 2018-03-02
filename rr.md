@@ -39,17 +39,48 @@ Now, `cd ..` to escape the **capnproto** build directory (if you performed that 
 
 And:
 
-` cd build_rr  &&  cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local -Ddisable32bit=ON  ../rr `
+```
+$ cd build_rr
+$ CC=clang CXX=clang++ cmake -G Ninja -Ddisable32bit=ON ../rr
+```
 
-Again we're assuming an *amd64-compatible* build, *non-root* install. You can omit the '-DCMAKE_INSTALL_PREFIX...' part and the rr binary will be
-installed under `/usr/local/` per the default.
+The commands above configure the **rr** build to use the toolchain found under the /opt/irods-externals folder 
+(cmake and clang).  Make sure that the /opt/irods-externals folders are in the $PATH environment before /bin and/or /usr/bin.
 
-After this, you should be able to build with `make` (insert your `-j <#cpusToUse>` if desired) , then:
+This will build rr:
 
-`make test` and (with `sudo` unless doing non-root install):
-`make install`
+```
+$ ninja all
+```
 
-The tests may fail on `vsyscall_reverse_next` due to a regex-fail in the test, but this is ok.
+And, now that rr has been built, test it and install it using sudo.  
+
+To test:
+
+```
+$ ninja test
+```
+
+The test runs (more than a thousand of them at this time) take a few minutes to complete, and should all pass.
+
+
+The installation of rr should target 
+/usr/local/ (the default action), not your local file space, since it will be used by more than one user:
+
+```
+$ sudo ninja install
+```
+
+To install rr locally under your home directory, make the following changes to the process above:
+
+Add the following flag to the cmake command (use any path that you can write to):
+```
+-DCMAKE_INSTALL_PREFIX:PATH=$HOME/local
+```
+Run the install process without using sudo:
+```
+$ ninja install
+```
 
 Sample use is (under bash, and optionally putting first line of below into your `~/.bashrc` so you don't have to type it every time):
 
