@@ -71,6 +71,17 @@ The installation of rr should target
 $ sudo ninja install
 ```
 
+To install rr locally under your home directory, make the following changes to the process above:
+
+Add the following flag to the cmake command (use any path that you can write to):
+```
+-DCMAKE_INSTALL_PREFIX:PATH=$HOME/local
+```
+Run the install process without using sudo:
+```
+$ ninja install
+```
+
 Sample use is (under bash, and optionally putting first line of below into your `~/.bashrc` so you don't have to type it every time):
 
 ```
