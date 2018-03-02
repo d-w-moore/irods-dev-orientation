@@ -77,7 +77,7 @@ Add the following flag to the cmake command (use any path that you can write to)
 ```
 -DCMAKE_INSTALL_PREFIX:PATH=$HOME/local
 ```
-Run the install process without using sudo:
+And, run the install process without using sudo:
 ```
 $ ninja install
 ```
