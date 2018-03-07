@@ -53,7 +53,7 @@ This will build rr:
 $ ninja all
 ```
 
-And, now that rr has been built, test it and install it using sudo.  
+And, now that rr has been built, test it and install it using sudo. (Note that tuning the `perf_event_paranoid` kernel parameter may be necessary first. Directions at the foot of this section[\[1\]](#1). 
 
 To test:
 
@@ -63,9 +63,8 @@ $ ninja test
 
 The test runs (more than a thousand of them at this time) take a few minutes to complete, and should all pass.
 
-
 The installation of rr should target 
-/usr/local/ (the default action), not your local file space, since it will be used by more than one user:
+/usr/local/ (the default action), not your local file space, since there it may be used by more than one user:
 
 ```
 $ sudo ninja install
@@ -92,4 +91,18 @@ rr replay -f <pid>
 ```
 
 (The `-w` in the first command apparently prevents the debugging from exiting in the case it aborts or exits with subprocesses still running.)
+
+---
+FootNotes
+---
+
+<A name="1"></A>
+
+On Linux based platforms , following these instructions may be necessary before testing  or running the newly built `rr`.
+   - We must modify a kernel parameter which may be set too high by default for `rr`'s proper functioning. Edit the `/etc/sysctl.conf` to include the following line:  
+```
+    kernel.perf_event_paranoid = -1
+```
+   - Although any value less than `2` should do.  
+   - To force the system to pick up this change, either do `sysctl -p` as ***root***, or reboot the machine.  
 
