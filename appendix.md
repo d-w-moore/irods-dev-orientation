@@ -54,15 +54,14 @@ Then follow the instruction below that corresponds to your choice of computing p
 
 ---
 <A name="part-C"> </A>
-<A name="dpkg-heck"> </A>
+<A name="dpkg_heck"> </A>
 
 ## Part C. Getting out of "dpkg heck"
 
 It is possible to arrive at an impasse with the `dpkg` system, in which (for example) `irods-server` package is partially installed and may neither be fully removed nor successfully installed using `dpkg` and `apt` commands. This might happen if, for example, the /var/lib/irods directory tree is removed before any attempt to uninstall the irods-server package itself, which owns and depends on some of the files under that directory. 
 
-When this happens, one should do the following:
+When this happens, one should do the following as user `root` :
 ```
-sudo su -
 mkdir -p /var/lib/irods/packaging
 cd /var/lib/irods/packaging ; touch  postinstall.sh  preremove.sh 
 chmod +x postinstall.sh  preremove.sh
@@ -70,6 +69,7 @@ chown irods:iords postinstall.sh  preremove.sh
 cd ..
 dpkg -r irods-server
 ```
+The deinstallation/re-installation of `irods-server` and other `irods` packages should proceed fine at this point.
 
 <A name="part-D"> </A>
 
