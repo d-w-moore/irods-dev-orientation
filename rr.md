@@ -89,6 +89,8 @@ rr record -w  <cmd args...>
 rr ps
 rr replay -f <pid>
 ```
+***NOTE w.r.t. debugging the iRODS server(s) using `rr`***
+The last of the commands given just above does the replay for the case of an iRODS server (vsn >=4.2) in which agents are spawned using only a fork() system call. In earlier versions (<=4.1) , agents were spawned with a fork() followed by exec() and thus the `-p` switch should be used in place of `-f`.
 
 (The `-w` in the first command apparently prevents the debugging from exiting in the case it aborts or exits with subprocesses still running.)
 
