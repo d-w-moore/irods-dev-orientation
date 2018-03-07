@@ -55,9 +55,19 @@ Then follow the instruction below that corresponds to your choice of computing p
 ---
 <A name="part-C"> </A>
 
-## NFS link to /projects directory
+## Part C. Getting out of "dpkg heck"
+
+It is possible to arrive at an impasse with the `dpkg` system, in which (for example) `irods-server` package is partially installed and may neither be fully removed nor successfully installed using `dpkg` and `apt` commands. This might happen if, for example, the /var/lib/irods directory tree is removed before any attempt to uninstall the irods-server package itself, which owns and depends on some of the files under that directory. 
+
+When this happens, one should do the following:
 ```
-na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize=65536,wsize=65536 0 0
+sudo su -
+mkdir -p /var/lib/irods/packaging
+cd /var/lib/irods/packaging ; touch  postinstall.sh  preremove.sh 
+chmod +x postinstall.sh  preremove.sh
+chown irods:iords postinstall.sh  preremove.sh
+cd ..
+dpkg -r irods-server
 ```
 
 <A name="part-D"> </A>
@@ -81,7 +91,12 @@ Keep in mind versions (latest production version at the last revision of this do
 <A> <IMG src="./Jenkins.png">
 </A>  
 
-...  
+...
+
+## NFS link to /projects directory
+```
+na-projects.edc.renci.org:/ /projects nfs vers=3,hard,intr,rw,bg,timeo=600,rsize=65536,wsize=65536 0 0
+```
 
 ...
 
