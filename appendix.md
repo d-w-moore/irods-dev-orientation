@@ -54,6 +54,7 @@ Then follow the instruction below that corresponds to your choice of computing p
 
 ---
 <A name="part-C"> </A>
+<A name="dpkg-heck"> </A>
 
 ## Part C. Getting out of "dpkg heck"
 
