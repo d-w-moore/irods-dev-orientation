@@ -27,7 +27,7 @@ It will also behoove us to remove all remnants of the previous server configurat
 ```
 sudo su - postgres -c "dropdb --if-exists ICAT && createdb ICAT"
 ```
-- *and* system files  (be sure not to do the following until you've actually taken the above steps to remove the old irods packages[<sup>*</sup>](./appendix.md#dpkg_heck)
+- *and* system files  ( be sure not to do the following until you've actually taken the above steps to remove the old irods packages or the package system *won't* be happy - [<sup>*see appendix w.r.t. "getting out of dpkg heck"</sup>](./appendix.md#dpkg_heck) )
 ```
 sudo rm -fr /etc/irods /var/lib/irods /tmp/irods/
 ```
