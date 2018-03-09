@@ -2,6 +2,7 @@
 
 ########################
 # iRODS Build-a-Bear v4
+# (modified from original form for demo purposes and some added convenience)
 # Save as ~/bin/syncbuildabear
 # run as "R_USER=remoteLoginName syncbuildabear" if remoteLoginName NE `id -un`
 ########################
@@ -19,7 +20,7 @@ echo ${TARGETPATH}
 cd ${SOURCEPATH}
 git rev-parse HEAD
 
-#== replicate for other repository as necessary
+#== replicate the above code for other repository/-ies as necessary:
 
 BUILDHOST=build-ub12.irods.renci.org
 SOURCEPATH=/home/${USERNAME:=`id -un`}/${RELPATH_TO_REPOS}/irods_client_icommands
