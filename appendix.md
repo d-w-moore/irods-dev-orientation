@@ -65,7 +65,7 @@ When this happens, one should do the following as user `root` :
 mkdir -p /var/lib/irods/packaging
 cd /var/lib/irods/packaging ; touch  postinstall.sh  preremove.sh 
 chmod +x postinstall.sh  preremove.sh
-chown irods:iords postinstall.sh  preremove.sh
+chown irods:irods postinstall.sh  preremove.sh
 cd ..
 dpkg -r irods-server
 ```
